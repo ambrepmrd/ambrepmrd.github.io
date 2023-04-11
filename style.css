@@ -1,0 +1,68 @@
+/* palette de couleurs : 
+#717171 : autre
+#FFFFFF : texte
+#000000 : fond
+#FDB7D2 : accent, liens, etc
+#9F1248 : accent 2
+Background : Three.js ?
+*/
+
+body{
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    height: 93vh;
+    padding: 2em 2em;
+}
+
+.containerContained{
+    height: 100%;
+    border: solid #FFFFFF 0.1em;
+}
+
+h1{
+    font-weight: 100;
+    font-size: 3em;
+    padding: 0.5%;
+}
+
+section{
+    padding: 5% 0.5% 0.5% 60%;
+}
+
+p, a, li{
+    font-size: 0.9em;
+    font-weight: 200;
+    text-align: right;
+    margin-bottom: 0.6em;
+}
+
+.pinkText{
+    color: #FDB7D2;
+}
+
+.projects{
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+}
+
+.projectsList{
+    list-style-type: none;
+    font-size: 1em;
+}
+
+.socialLinks{
+    display: flex;
+    justify-items: left;
+    padding: 0 0 0 0.5%;
+}
+
+.socialIcon{
+    background-color: #FFFFFF;
+    max-width: 25px;
+    height:auto;
+}
