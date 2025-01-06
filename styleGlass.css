@@ -8,9 +8,9 @@ Background : Three.js ?
 */
 
 body{
-    background-color: #000000;
-    color: #FFFFFF;
+    color: #492031;
     font-family: 'Raleway', sans-serif;
+    background-image: url('/imgs/background2.png');
 }
 
 .backgroundThree{
@@ -32,12 +32,13 @@ body{
     grid-row: span 2; 
 }
 
-#socialLinks{
+.socialLinks{
     display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
 }
 
 .socialIcon{
-    background-color: #FFFFFF;
     max-width: 2rem;
     height: auto;
 }
@@ -48,15 +49,20 @@ h1 {
     margin-bottom: 0.6em;
 }
 
+h3 {
+    font-weight: 400;
+    margin-bottom: 0.6em;
+}
+
 p, a, li{
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.2em;
     margin-bottom: 0.6em;
 }
 
 a, em {
-    color: #FDB7D2;
+    color: #a54d72;
 }
 
 
@@ -64,24 +70,38 @@ a, em {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-auto-flow: dense;
-    position: relative;
     height: 100%;
-    border: solid #FFFFFF 0.1em;
-    margin: 2em 2em;
-    padding: 1rem;
+    margin: 2rem;
     gap: 1rem;
 
     .item {
-        border: solid #FFFFFF 0.1em;
-        padding: 1em 1em;
+        position: relative;
+        border-radius: 1rem;
+        background: rgb(255,255,255);
+        background: linear-gradient(156deg, rgba(255, 255, 255, 0.2) 0%, rgba(255,190,220,0.3) 100%);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1.5rem;
         transition: all 1s ease-out;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
     }
 
+    .item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
     .item:hover {
-        background-color: rgba(253, 183, 210, 0.4);
+        background: rgba(255,190,220,0.3);
     }
 
     .item_hashtag {
@@ -95,9 +115,19 @@ a, em {
         align-self: flex-end;
     }
 
+    .item_subtitle {
+        margin-bottom: 0;
+    }
+
+    .item_techno {
+        padding-left: 1rem;
+    }
+
+
     .item_thumbnail {
         position: relative;
         margin-top: auto;
+        cursor: pointer;
 
         .item_thumbnail_img {
             max-width: 100%;
@@ -113,7 +143,6 @@ a, em {
             right: 50%;
             transform: translate(50%, -50%);
             top: 50%;
-            cursor: pointer;
         }
     }
     
@@ -134,8 +163,13 @@ a, em {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
-    background: black;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(156deg, rgba(255, 255, 255, 0.2) 0%, rgba(255,190,220,0.3) 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
@@ -183,7 +217,7 @@ a, em {
     right: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(2px);
     z-index: 1;
 }

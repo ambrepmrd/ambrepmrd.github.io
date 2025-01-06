@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styleGlass.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -20,41 +20,118 @@
     }
     </script>
 
-    <title>Ambre's introduction</title>
+    <title>Portfolio d'Ambre</title>
 </head>
 <body>
     <div class="container">
-        <div class="containerContained">
-            <div class="backgroundThree"><canvas class="webgl"></canvas></div>
-            <h1><em class="pinkText">A</em>mbre Pomarede-Escaut</h1>
-            <section class="socialLinks">
-                <a href="https://www.linkedin.com/in/ambrepomarede/"><img class="socialIcon" src="./linkedin.svg" alt="icone linkedin"> </a>
-            </section>
 
-            <section class="intro smallContain">
-                <div class="smallContainer">
-                    <p>Hi, I'm Ambre, from France. I am studying to be a <em class="pinkText">developer</em>! I enjoy a lot of things but my favorites always include making and creating things. Obviously, I had to try making websites and apps.</p>
-                    <p>I don't have a lot of projects yet, as I began recently. However, I would be thrilled to work with you !</p>
-                    <p>Currently in O'Clock school and looking for an apprenticeship in South of France.</p>
+        <!-- <div class="backgroundThree"><canvas class="webgl"></canvas></div> -->
+        <div class="overlay hidden"></div>
+
+        <div class="item" id="aboutMe">
+            <h1><em>A</em>mbre Pomarede-Escaut</h1>
+            <p>Salut, moi c'est Ambre, et je suis <em class="pinkText">développeuse</em> ! J'ai des goûts éclectiques mais qui se rassemblent souvent autour de la création. C'est d'ailleurs pour ça que je me suis lancée dans le développement web.</p>
+            <p>Actuellement en alternance pour le titre Concepteur et Développeur d'Applications chez O'Clock, je cherche un emploi dans les alentours de Toulouse ou en remote à partir de Mars 2025.</p>
+            <p>Plutôt intéressée par le front-end et React mais je suis ouverte aux projets qui me permettront de progresser d'autres aspects tels que le back-end en PHP ou en JS.</p>
+            <p class="item_hashtag">#Introduction</p>
+        </div>
+
+        <div class="item" id="studies">
+            <p>Titre professionnel Concepteur et développeur d'applications chez O'Clock - 2025</p>
+            <p>Licence professionnelle Communication digitale et webmastering - 2017</p>
+            <p>DUT Techniques de commercialisation - 2016</p>
+            <p class="item_hashtag">#Études</p>
+        </div>
+
+        <div class="item" id="interests">
+            <p>En dehors du travail, je passe beaucoup de mon temps à coudre, faire des randonnées ou jouer à des jeux-vidéos.</p>
+            <p>Je fais du cosplay et ai déjà travaillé en pro avec des jeux-vidéos. Je suis également représentante française pour un concours international en 2025.</p>
+            <p class="item_hashtag">#Passions</p>
+        </div>
+
+        <div class="item" id="project4">
+            <p class="item_subtitle"><a href="https://github.com/ambrepmrd/make-it-pink">"Make It Pink"</a> extension Chrome qui change les couleurs de la page active en teintes de rose - 2023</p>
+            <p class="item_techno">- Technologies : Javascript</p>
+            <p class="item_subtitle">Bot Discord - en cours - 2023</p>
+            <p class="item_techno">- Technologies : Javascript, Node.js, API Discord, API GSheets</p>
+            <p class="item_hashtag">#Projets</p>
+        </div>
+
+        <div class="item" id="socialLinks">
+            <div class="socialLinks">
+                <a href="https://www.linkedin.com/in/ambrepomarede/"><img class="socialIcon" src="/imgs/linkedin.svg" alt="icone linkedin"> </a>
+                <a href="https://github.com/ambrepmrd"><img class="socialIcon" src="/imgs/github.svg" alt="icone github"> </a>
+                <a href="https://welovedevs.com/fr/app/user/ambre-developpeuse-junior-en-recherche-dune-alternance"><img class="socialIcon" src="/imgs/wod.svg" alt="icone we love dev"> </a>
+            </div>
+            <p class="item_hashtag">#Réseaux</p>
+        </div>
+
+        <div class="item" id="project1">
+            <h3>Intranet d'entreprise</h3>
+            <p>De sa conception (layout, features, bases de données, maquette) à sa réalisation (front & back) et son déploiement</p>
+            <p>- Technologies : Typescript, Node.js, React, SCSS, Figma</p>
+            <div class="item_thumbnail">
+                <img class="item_thumbnail_img open_modal" src="/imgs/img_intranet2.png" alt="Miniature du projet" data-modal-target="#project1_modal"/>
+                <img class="item_thumbnail_svg open_modal" src="/imgs/icon_add.svg" alt="Afficher en grand" data-modal-target="#project1_modal"/>    
+            </div>
+            <section class="modal" id="project1_modal">
+                <img class="modal_svg close_modal" src="/imgs/icon_close.svg" alt="Fermer l'aperçu" />    
+                <img class="modal_img" src="/imgs/img_intranet2.png" alt="Capture d'écran du projet"/>
+                <div class="modal_gallery">
+                    <a href="imgs/img_intranet2.png" title="Capture d'écran d'une astreinte"><img src="imgs/img_intranet2.png" class="modal_gallery_thumbnail" alt="Miniature d'une astreinte" /></a>
+                    <a href="imgs/img_intranet.png" title="Capture d'écran de la modification d'une astreinte"><img src="imgs/img_intranet.png" class="modal_gallery_thumbnail" alt="Miniature de la modification d'une astreinte" /></a>
+                    <a href="imgs/img_intranet4.png" title="Capture d'écran d'un ticket"><img src="imgs/img_intranet4.png" class="modal_gallery_thumbnail" alt="Miniature d'un ticket" /></a>
+                    <a href="imgs/img_intranet3.png" title="Capture d'écran de la modification d'un ticket"><img src="imgs/img_intranet3.png" class="modal_gallery_thumbnail" alt="Miniature de la modification d'un ticket" /></a>
                 </div>
             </section>
-        
-            <section class="projects smallContain">
-                <div class="smallContainer">
-                    <p>Here are some of my projects... More to come !</p>
-                    <ul class="projectsList">
-                        <li class="projectDiscord">Discord bot - in progress - 2023</li>
-                        <li class="projectDiscordTechno techno">Technologies : Javascript, Node.js, API Discord, API GSheets</li>
-                        <li class="projectPortfolio">Portfolio - in progress - 2023</li>
-                        <li class="projectPortfolioTechno techno">Technologies : HTML, CSS, Three.js</li>
-                        <li class="projectOClock Techno">O'Clock projects - soon - 2023</li>
-                        <li class="projectOClockTechno techno">Technologies : PHP, Laravel, MySQL, Javascript, Node.js</li>
-                    </ul>
-                </div> 
-            </section>
-
+            <p class="item_hashtag_img">#Projet</p>
         </div>
+        
+        <div class="item">
+            <p class="item_subtitle">Développeuse web chez TMIC Ellipses en alternance (Toulouse) - 2023/2025</p>
+            <p class="item_techno item_subtitle">- Création de sites pour des librairies</p>
+            <p class="item_techno item_subtitle">- Création et modification de modules pour l’administration des sites ou leur liaison au logiciel Ellipses</p>
+            <p class="item_techno">- Réalisation d’un intranet</p>
+            <p>5 ans d'expérience en rédaction, SEO et communication web (Toulouse) - 2017/2022</p>
+            <p class="item_hashtag">#Expériences</p>
+        </div>
+
+        <div class="item" id="project2">
+            <p>Développement front et design de sites pour des librairies tels que <a href="https://lalibrairiefrancaise.hu/">Prelude</a>, en partant d'un site de base et en suivant une maquette ou simplement les couleurs d'un logo selon le site</p>
+            <p>- Technologies : HTML, CSS, Thelia</p>
+            <div class="item_thumbnail">
+                <img class="item_thumbnail_img open_modal" src="/imgs/img_prelude.png" alt="Miniature du projet" data-modal-target="#project2_modal"/>
+                <img class="item_thumbnail_svg open_modal" src="/imgs/icon_add.svg" alt="Afficher en grand" data-modal-target="#project2_modal" />    
+            </div>
+            <section class="modal" id="project2_modal">
+                <img class="modal_svg close_modal" src="/imgs/icon_close.svg" alt="Fermer l'aperçu" />    
+                <img class="modal_img" src="/imgs/img_prelude.png" alt="Capture d'écran du projet"/>
+            </section>
+            <p class="item_hashtag_img">#Projet</p>
+        </div>
+
+        <div class="item" id="project3">
+            <h3>Projet de fin d'études pour O'Clock</h3>
+            <p>Développement front, scrum master, création d'assets graphiques (charte graphique, logo, maquette)</p>
+            <p>- Technologies : React, Typescript, Figma</p>
+            <div class="item_thumbnail">
+                <img class="item_thumbnail_img open_modal" src="/imgs/img_packngo1.png" alt="Miniature du projet" data-modal-target="#project3_modal"/>
+                <img class="item_thumbnail_svg open_modal" src="/imgs/icon_add.svg" alt="Afficher en grand" data-modal-target="#project3_modal" />    
+            </div>
+            <section class="modal" id="project3_modal">
+                <img class="modal_svg close_modal" src="/imgs/icon_close.svg" alt="Fermer l'aperçu" />    
+                <img class="modal_img" src="/imgs/img_packngo1.png" alt="Capture d'écran du projet"/>
+                <div class="modal_gallery">
+                    <a href="imgs/img_packngo1.png" title="Capture d'écran de la page d'accueil"><img src="imgs/img_packngo1.png" class="modal_gallery_thumbnail" alt="Miniature de la page d'accueil" /></a>
+                    <a href="imgs/img_packngo2.png" title="Capture d'écran de la page de gestion des cartons"><img src="imgs/img_packngo2.png" class="modal_gallery_thumbnail" alt="Miniature de la page de gestion des cartons" /></a>
+                    <a href="imgs/img_packngo3.png" title="Capture d'écran de la page d'ajout de carton"><img src="imgs/img_packngo3.png" class="modal_gallery_thumbnail" alt="Miniature de la page d'ajout de carton" /></a>
+                </div>
+            </section>
+            <p class="item_hashtag_img">#Projet</p>
+        </div>
+
     </div>
     <script type="module" src="./background.js"></script>
+    <script type="module" src="./modal.js"></script>
 </body>
 </html>
