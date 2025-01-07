@@ -72,7 +72,7 @@ a, em {
     margin: 2rem;
     gap: 1rem;
     
-    @media (min-width: 720px) {
+    @media (min-width: 400px) {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
 
